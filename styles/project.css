@@ -1,3 +1,6 @@
+/* Coloque un API para letra la baja de googel font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .project-container{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -5,8 +8,22 @@
 
 }
 .project-img{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:20px;
 
 }
 .project-text{
-
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 2;
+}
+h3{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
