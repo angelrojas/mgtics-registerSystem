@@ -70,15 +70,15 @@ let student5 = new Student("Fernando",99,true);
 console.log(student3,student4,student5);
 
 //function
-function saludar(nombre){
-    console.log("Hola " + nombre)
+//function saludar(nombre){
+  //  console.log("Hola " + nombre)
     
     //return "Hello" regresa algo a consola 
-}
+//}
 //console.log(saludar());
 
 //llamar la funcion
-saludar("angel");
+//saludar("angel");
 
 function sumar(a,b){
     let total= a+b;
