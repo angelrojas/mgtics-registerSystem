@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="./styles/display.css">
+    <title>Facultades</title>
 </head>
 <body>
     <header>
@@ -20,19 +21,26 @@
     </div>
     </header>
     <main class="container">
+<h3>Registro Facultades</h3>
         <div>
-            <img class="student" src="https://static.vecteezy.com/system/resources/previews/024/724/633/non_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-free-png.png" alt="student image">
-        </div>
 
-        <div>
-            <a class= "btn" href="register.html">Register Now</a>
+            <div>
+                <label>Facultad</label>
+                <input type="text" id="txtFaculty">
+            </div>
+            <div>
+                <label>Campus</label>
+                <input type="text" id="txtCampus">
+            </div>
+         
         </div>
-        <h2>Welcome</h2>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus minus perferendis dolorem eius, esse veniam dolore iure? Facilis illo dolorum mollitia voluptas nesciunt asperiores commodi doloribus magni natus. Aliquid, placeat!</p>
+        <button onclick="registerFaculty()">Registrar</button>
+
     </main>
+<script src="./scripts/faculty.js"></script>
+<script src="./scripts/storageManager.js"></script>
 
-    <footer>
-    </footer>
-    
+
+
 </body>
 </html>
