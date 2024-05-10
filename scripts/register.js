@@ -39,6 +39,22 @@ function isValid(unAlumno){
 
     return validacion;
 }
+// Obtener las facultades del localStorage cuando el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    let selectFacultades = document.getElementById("facultad");
+    let facultadesGuardadas = JSON.parse(localStorage.getItem("facultades"));
+
+    if (facultadesGuardadas) {
+        facultadesGuardadas.forEach(facultad => {
+            let option = document.createElement("option");
+            option.text = facultad.name;
+            option.value = facultad.name;
+            selectFacultades.appendChild(option);
+        });
+    }
+});
+
+
 //registrar funcion
 function registrar(){
     let inputNombre = document.getElementById("txtNombre").value;
@@ -54,6 +70,7 @@ function registrar(){
     let nuevoAlumno = new Student(inputNombre,inputEdad,inputGender,inputFaculty,inputMateria1,inputMateria2,inputMateria3,inputEmail,inputPassword);
     if(isValid(nuevoAlumno)){
         students.push(nuevoAlumno);
+        
 
         //displayCards();
         displayTables();
@@ -63,6 +80,7 @@ function registrar(){
 
 
 }
+
 
 
 
