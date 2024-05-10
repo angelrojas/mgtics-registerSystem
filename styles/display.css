@@ -13,3 +13,13 @@
 h3{
     margin: 20px 0;
 }
+.table, th, td{
+    border: 5px solid #ffcc00;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  #studentTable{
+    margin-left: auto; 
+    margin-right: auto;
+}

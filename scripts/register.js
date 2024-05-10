@@ -54,16 +54,23 @@ function registrar(){
     let nuevoAlumno = new Student(inputNombre,inputEdad,inputGender,inputFaculty,inputMateria1,inputMateria2,inputMateria3,inputEmail,inputPassword);
     if(isValid(nuevoAlumno)){
         students.push(nuevoAlumno);
-        displayCards();
+
+        //displayCards();
+        displayTables();
     }else{
         alert("Por favor completa los campos");
     }
+
+
 }
+
+
 
 function init(){
     let student1 = new Student("Samuel",99,"Masculino","Medicina",87,89,99,"s@s.com","123456");
     students.push(student1);
-    displayCards();
+    //displayCards();
+    displayTables();
 }
 
 window.onload=init;// espera a rendirizar el HTML

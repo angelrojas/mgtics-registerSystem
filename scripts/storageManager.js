@@ -1,6 +1,6 @@
 function saveItems(item){
-    console.log(item);
+    //console.log(item);
     let val = JSON.stringify(item);
-    console.log(val);
+    //console.log(val);
     localStorage.setItem("facultades",val);
 }
