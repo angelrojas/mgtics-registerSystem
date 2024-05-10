@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let selectFacultades = document.getElementById("facultad");
     let facultadesGuardadas = JSON.parse(localStorage.getItem("facultades"));
 
+
+
+
     if (facultadesGuardadas) {
         facultadesGuardadas.forEach(facultad => {
             let option = document.createElement("option");
@@ -70,7 +73,6 @@ function registrar(){
     let nuevoAlumno = new Student(inputNombre,inputEdad,inputGender,inputFaculty,inputMateria1,inputMateria2,inputMateria3,inputEmail,inputPassword);
     if(isValid(nuevoAlumno)){
         students.push(nuevoAlumno);
-        
 
         //displayCards();
         displayTables();
@@ -80,9 +82,6 @@ function registrar(){
 
 
 }
-
-
-
 
 function init(){
     let student1 = new Student("Samuel",99,"Masculino","Medicina",87,89,99,"s@s.com","123456");

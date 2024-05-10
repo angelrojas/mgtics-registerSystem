@@ -27,6 +27,7 @@ function registerFaculty() {
     if (isValidFaculty(nuevaFaculty)) {
        
         facultades.push(nuevaFaculty);
+
         saveItems(facultades);
      
         
