@@ -72,7 +72,8 @@ function registrar(){
 
     let nuevoAlumno = new Student(inputNombre,inputEdad,inputGender,inputFaculty,inputMateria1,inputMateria2,inputMateria3,inputEmail,inputPassword);
     if(isValid(nuevoAlumno)){
-        students.push(nuevoAlumno);
+        //students.push(nuevoAlumno);
+        insertToDataBase(nuevoAlumno);
 
         //displayCards();
         displayTables();
@@ -81,6 +82,35 @@ function registrar(){
     }
 
 
+}
+function insertToDataBase(){
+    $.ajax({
+        url:"./app/register.php",
+        method:"POST",
+        data:{
+            name:newStudent.name,
+            age:newStudent.age
+
+        },
+        dataType:"json",
+        success:function(response){
+            //console.log(response);
+            if(response.success){
+                setTimeout(function(){
+                    location.reload();
+                },1000);
+            }else{
+                console.log("Error, por favor intenta");
+
+            }
+
+        },
+        error:function(xhr,status,error){
+            console.log("Error de conexion");
+            console.error(error);
+
+        }
+    });
 }
 
 function init(){
