@@ -17,13 +17,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $edad = $_POST["age"];
 
         $stmt_insert_usuarios =$conn->prepare("INSERT INTO estudiantes (name,age) VALUES (?,?)");
-        $stmt_insert_usuarios->bind_param("si",$nombre,$edad);
+        $stmt_insert_usuarios->bind_param("ss",$nombre,$edad);
         $stmt_insert_usuarios->execute();
 
         echo json_encode(array("success" => true));
         $stmt_insert_usuarios-> close();
 
-        # code...
+       
     }
 
     $conn->close();

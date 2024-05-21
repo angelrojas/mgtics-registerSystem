@@ -1,7 +1,5 @@
 function displayCards(student){
     let card="";
-    //for (let i=0;i<students.length;i++){
-       // let student=students[i];
         card=`
         <div id="${student.id}" class='student'>
             <h4> Nombre: ${student.name}</h4>
@@ -15,11 +13,11 @@ function displayCards(student){
             <button>Eliminar</button>
          </div>
          `;   
-    }
-    document.getElementById("studentList").innerHTML=card;
+    
+    document.getElementById("studentList").innerHTML+=card;
 
 
-//}
+}
 function searchToDataBase(){
     $.ajax({
         url:"./app/get_students.php",
@@ -37,7 +35,7 @@ function searchToDataBase(){
 
         },
         error:function(xhr,status,error){
-            console.log(error)
+            console.error(error);
 
         }
     })
@@ -46,6 +44,7 @@ function init(){
     searchToDataBase();
 }
 window.onload=init;
+/*
 function displayTables(){
     let table="";
     for (let i=0;i<students.length;i++){
@@ -79,3 +78,4 @@ function displayTables(){
     document.getElementById("studentTable").innerHTML=table;
 
 }
+*/

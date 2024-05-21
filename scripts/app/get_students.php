@@ -35,12 +35,12 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
         }
         echo json_encode(array("success"=>true, "data"=> $data));
     }else{
-    echo json_encode(array("success"=>false, "error"=> "No se encontraron datso"));
+    echo json_encode(array("success"=>false, "error" => "No se encontraron datos"));
     }
 
-$stmt->close();
+    $stmt->close();
 }else{
-    echo json_encode(array("success"=>false, "error"=> "Solicitud no valida"));
+    echo json_encode(array("success"=>false, "error" => "Solicitud no valida"));
 
     
 }

@@ -75,15 +75,15 @@ function registrar(){
         //students.push(nuevoAlumno);
         insertToDataBase(nuevoAlumno);
 
-        //displayCards();
-        displayTables();
+        displayCards();
+        //displayTables();
     }else{
         alert("Por favor completa los campos");
     }
 
 
 }
-function insertToDataBase(){
+function insertToDataBase(newStudent){
     $.ajax({
         url:"./app/register.php",
         method:"POST",
@@ -94,8 +94,9 @@ function insertToDataBase(){
         },
         dataType:"json",
         success:function(response){
-            //console.log(response);
+            
             if(response.success){
+                console.log(response);
                 setTimeout(function(){
                     location.reload();
                 },1000);
@@ -112,12 +113,13 @@ function insertToDataBase(){
         }
     });
 }
-
+/*
 function init(){
     let student1 = new Student("Samuel",99,"Masculino","Medicina",87,89,99,"s@s.com","123456");
     students.push(student1);
-    //displayCards();
-    displayTables();
+    displayCards();
+    //displayTables();
 }
 
 window.onload=init;// espera a rendirizar el HTML
+*/
