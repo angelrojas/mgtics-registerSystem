@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/display.css">
+    <link rel="stylesheet" href="./styles/register.css">
     <title>Register</title>
 </head>
 <body>
@@ -16,14 +17,14 @@
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="articles.html">Articles</a>
-            <a href="contacto.html">Contact</a>
             <a href="faculty.html">Facultades</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </div>
     </header>
     <main class="container">
 <h3>Registra un alumno</h3>
-        <div>
+        <div >
             <div>
                 <label>Nombre:</label>
                 <input type="text" id="txtNombre">
@@ -70,18 +71,17 @@
                 <label>Password:</label>
                 <input type="password" id="txtPassword">
             </div>
+            <button onclick="registrar()">Registrar</button>
         </div>
-        <button onclick="registrar()">Registrar</button>
-<h3>Estudiantes resgistrados</h3>
-<div id="studentList"></div>
-<table id="studentTable"></table>
-<tr><th></th></tr>
-<tr><td></td></tr>
-
+        
+<!-- <h3>Estudiantes resgistrados</h3>
+<div class="container" id="studentList"></div>
+<script src="./scripts/display.js"></script>
+-->
     </main>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="./scripts/register.js"></script>
-<script src="./scripts/display.js"></script>
+
 
 
 </body>

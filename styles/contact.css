@@ -1,0 +1,101 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Specify a fallback font */
+    background-color: black;
+    color: white;
+}
+
+p {
+    line-height: 2;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utilities */
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: block;
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fc0; /* Orange color */
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Contact Page Specific Styles */
+.contact-info,
+.contact-form {
+    display: flex; /* Arrange info and form side-by-side */
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    margin-bottom: 50px;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Include border in width calculation */
+}
+
+.contact-form textarea {
+    height: 100px;
+}

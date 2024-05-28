@@ -75,7 +75,7 @@ function registrar(){
         //students.push(nuevoAlumno);
         insertToDataBase(nuevoAlumno);
 
-        displayCards();
+        //displayCards();
         //displayTables();
     }else{
         alert("Por favor completa los campos");
@@ -89,7 +89,14 @@ function insertToDataBase(newStudent){
         method:"POST",
         data:{
             name:newStudent.name,
-            age:newStudent.age
+            age:newStudent.age,
+            gender:newStudent.gender,
+            faculty:newStudent.faculty,
+            materia1:newStudent.materia1,
+            materia2:newStudent.materia2,
+            materia3:newStudent.materia3,
+            email:newStudent.email,
+            password:newStudent.password
 
         },
         dataType:"json",
@@ -108,7 +115,7 @@ function insertToDataBase(newStudent){
         },
         error:function(xhr,status,error){
             console.log("Error de conexion");
-            console.error(error);
+            //console.error(error);
 
         }
     });

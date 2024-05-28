@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="barra-menu">
+            <h1>Información de Contacto</h1>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="articles.html">Articles</a>
+            <a href="faculty.html">Faculties</a>
+            
+        </nav>
+    </div>
+    </header>
+    <main class="container">
+        <section class="contact-info">
+            
+            <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad Ficticia</p>
+            <p><strong>Teléfono:</strong> (55) 5555-5555</p>
+            <p><strong>Correo electrónico:</strong> contacto@universidadficticia.edu.mx</p>
+            <p><strong>Horario de atención:</strong> Lunes a viernes de 8:00 a 18:00 hrs.</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Formulario de Contacto</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

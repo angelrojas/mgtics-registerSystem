@@ -1,5 +1,5 @@
 function displayCards(student){
-    let card="";
+        let card="";
         card=`
         <div id="${student.id}" class='student'>
             <h4> Nombre: ${student.name}</h4>
@@ -12,7 +12,8 @@ function displayCards(student){
             <p> Correo Electronico: ${student.email} </p>
             <button>Eliminar</button>
          </div>
-         `;   
+            `; 
+     
     
     document.getElementById("studentList").innerHTML+=card;
 
@@ -35,7 +36,7 @@ function searchToDataBase(){
 
         },
         error:function(xhr,status,error){
-            console.error(error);
+            console.log(error);
 
         }
     })

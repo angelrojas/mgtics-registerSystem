@@ -12,15 +12,14 @@ include("connection.php");
 
 if($_SERVER["REQUEST_METHOD"] == "GET"){
     if ($conn->connect_error){
-    die("Error de conexion de a base datos" . $conn->connect_error);
+        die("Error de conexion de la base datos" . $conn->connect_error);
     }
 
-    $query = "SELECT id,name,age FROM estudiantes";
+    $query = "SELECT id,name,age,gender,faculty,materia1,materia2,materia3,email,password FROM estudiantes";
 
     $stmt=$conn->prepare($query);
     $stmt->execute();
-
-    $results=$stmt->get_result();
+    $result =$stmt->get_result();
 
     if ($result->num_rows >0) {
         $data = array();
@@ -29,7 +28,14 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
             $data[] = array(
                 "id"=>$row["id"],
                 "name"=>$row["name"],
-                "age"=>$row["age"]
+                "age"=>$row["age"],
+                "gender"=>$row["gender"],
+                "faculty"=>$row["faculty"],
+                "materia1"=>$row["materia1"],
+                "materia2"=>$row["materia2"],
+                "materia3"=>$row["materia3"],
+                "email"=>$row["email"],
+                "password"=>$row["password"]
 
             );
         }
