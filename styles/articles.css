@@ -1,0 +1,82 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a; /* Light gray background */
+    color: white; /* Dark gray text */
+}
+
+a {
+    color: gray; /* Blue link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utilities */
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.btn {
+    display: block;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fc0; /* Orange color */
+    color: #fff; /* White text */
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f0c000; /* Darker orange on hover */
+}
+
+/* Articles Page Specific Styles */
+.articles {
+    padding-bottom: 50px;
+}
+
+.articles h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.article-item {
+    background-color: #060606;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.article-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.article-item p {
+    line-height: 1.5;
+}
